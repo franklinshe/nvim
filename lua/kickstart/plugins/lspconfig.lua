@@ -219,6 +219,10 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'isort', -- Used to format Python code
+        'black', -- Used to format Python code
+        'rustfmt', -- Used to format Rust code
+        -- 'styler', -- Used to format R code, NOTE: need to install styler package, see github.com/devOpifex/r.nvim
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
