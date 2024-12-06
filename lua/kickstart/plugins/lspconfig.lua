@@ -179,8 +179,9 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        pyright = {},
-        rust_analyzer = {},
+        pyright = {}, -- Python LSP
+        rust_analyzer = {}, -- Rust LSP
+        texlab = {}, -- LaTeX LSP
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:

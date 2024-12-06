@@ -25,6 +25,19 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Make buffer navigation easier.
+-- Use <Tab> and <S-Tab> to switch between buffers
+---
+--- See `:help buffer` for a list of all buffer commands
+vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>', { desc = 'Move to the next buffer' })
+vim.keymap.set('n', '<S-Tab>', '<cmd>bprevious<CR>', { desc = 'Move to the previous buffer' })
+
+-- Toggle relative line numbers with <leader><C-r>
+vim.keymap.set('n', '<leader><C-r>', '<cmd>set relativenumber!<CR>', { desc = 'Toggle relative line numbers' })
+
+-- Duplicate a line and comment out the first line
+vim.keymap.set('n', 'yc', 'yy<cmd>normal gcc<CR>p', { desc = 'Duplicate a line and comment out the first line' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 

@@ -34,6 +34,7 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         rust = { 'rustfmt' },
+        tex = { 'tex-fmt' }, -- NOTE: This is NOT installed via mason, see github.com/WGUNDERWOOD/tex-fmt
         -- r = { 'styler' },
         -- Conform can also run multiple formatters sequentially
         python = { 'isort', 'black' },
